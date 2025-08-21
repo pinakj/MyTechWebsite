@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Reset and Base Styles with Uneven Rounded Squares Design */
 * {
     margin: 0;
     padding: 0;
@@ -9,36 +9,42 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     line-height: 1.58;
     color: #242424;
-    background-color: #ffffff;
+    background-color: #f8f9fa;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(102, 126, 234, 0.05) 0%, transparent 15%),
+        radial-gradient(circle at 90% 80%, rgba(240, 147, 251, 0.05) 0%, transparent 15%);
     font-size: 20px;
     letter-spacing: -0.003em;
 }
 
 .container {
-    max-width: 680px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
 }
 
-/* Header Styles */
+/* Header Styles with Uneven Rounded Corners */
 .header {
     background: #ffffff;
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f0f0f0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 24px;
+    padding: 16px 24px;
     max-width: 1400px;
     margin: 0 auto;
-    min-height: 56px;
+    min-height: 60px;
     gap: 20px;
+    border-radius: 20px 8px 24px 10px; /* Uneven rounded corners */
+    background: #ffffff;
 }
 
 .nav-left {
@@ -54,22 +60,26 @@ body {
     text-decoration: none;
     color: inherit;
     transition: opacity 0.2s ease;
+    padding: 8px 16px;
+    border-radius: 16px 6px 12px 8px; /* Uneven rounded corners */
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 50%, rgba(240, 147, 251, 0.1) 100%);
 }
 
 .logo-link:hover {
     opacity: 0.8;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 50%, rgba(240, 147, 251, 0.2) 100%);
 }
 
 .logo {
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    margin-right: 8px;
+    margin-right: 12px;
 }
 
 .logo svg {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     display: block;
 }
 
@@ -78,26 +88,26 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: -0.4px;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
     white-space: nowrap;
     margin: 0;
 }
 
 .search-container-fixed {
     position: absolute;
-    left: calc(32px + 16px + 15ch + 50px); /* logo + gap + title (15 chars) + spacing */
+    left: calc(36px + 16px + 15ch + 50px); /* logo + gap + title (15 chars) + spacing */
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    width: clamp(150px, 15vw, 200px);
-    min-width: 150px;
+    width: clamp(180px, 15vw, 240px);
+    min-width: 180px;
 }
 
 .search-container {
-    max-width: 280px;
-    min-width: 180px;
+    max-width: 320px;
+    min-width: 200px;
     margin: 0;
 }
 
@@ -109,31 +119,32 @@ body {
 
 .search-box i {
     position: absolute;
-    left: 10px;
+    left: 14px;
     color: #6b6b6b;
-    font-size: 12px;
+    font-size: 14px;
     z-index: 2;
     pointer-events: none;
 }
 
 .search-input {
     width: 100%;
-    padding: 8px 12px 8px 30px;
-    border: 1px solid #e5e5e5;
-    border-radius: 99em;
-    font-size: 12px;
+    padding: 12px 16px 12px 40px;
+    border: 2px solid #f0f0f0;
+    border-radius: 24px 10px 16px 12px; /* Uneven rounded corners */
+    font-size: 14px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-weight: 400;
-    background: #f8f9fa;
-    transition: all 0.2s ease;
+    background: #ffffff;
+    transition: all 0.3s ease;
     letter-spacing: 0.3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .search-input:focus {
     outline: none;
     border-color: #667eea;
     background: #ffffff;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
 }
 
 .search-input::placeholder {
@@ -143,15 +154,17 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 32px;
+    gap: 28px;
 }
 
 .nav-menu a {
     text-decoration: none;
     color: #6b6b6b;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
+    padding: 8px 16px;
+    border-radius: 12px 6px 10px 5px; /* Uneven rounded corners */
 }
 
 .nav-menu a:hover {
@@ -159,54 +172,78 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    background-color: rgba(102, 126, 234, 0.1);
 }
 
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 8px;
+    border-radius: 10px 5px 8px 4px; /* Uneven rounded corners */
+    background: #f8f9fa;
 }
 
 .hamburger span {
-    width: 24px;
-    height: 2px;
+    width: 26px;
+    height: 3px;
     background: #242424;
-    margin: 2px 0;
+    margin: 3px 0;
     transition: 0.3s;
+    border-radius: 2px;
 }
 
-/* Hero Section - Medium Style with Neon Accent */
+/* Hero Section with Uneven Rounded Squares Design */
 .hero {
     background: #ffffff;
     color: #242424;
-    padding: 100px 0 60px;
-    border-bottom: 1px solid #f2f2f2;
-    min-height: 45vh;
+    padding: 120px 0 80px;
+    border-bottom: 1px solid #f0f0f0;
+    min-height: 50vh;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+        radial-gradient(circle at 15% 25%, rgba(102, 126, 234, 0.08) 0%, transparent 20%),
+        radial-gradient(circle at 85% 75%, rgba(240, 147, 251, 0.08) 0%, transparent 20%);
+    z-index: 0;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 32px;
     text-align: center;
     width: 100%;
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 32px 12px 40px 16px; /* Uneven rounded corners */
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    border: 1px solid #f0f0f0;
 }
 
 .hero-content h1 {
-    font-size: clamp(32px, 8vw, 56px);
-    font-weight: 700;
-    margin-bottom: 24px;
-    line-height: 1.3;
-    letter-spacing: 2px;
-    word-spacing: 8px;
+    font-size: clamp(36px, 8vw, 64px);
+    font-weight: 800;
+    margin-bottom: 28px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    word-spacing: 4px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     position: relative;
-    padding-bottom: 16px;
+    padding-bottom: 24px;
 }
 
 .hero-content h1::after {
@@ -215,293 +252,368 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 3px;
+}
+
+.hero-content p {
+    font-size: clamp(20px, 4vw, 24px);
+    margin-bottom: 0;
+    color: #6b6b6b;
+    line-height: 1.6;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 20px 8px 24px 10px; /* Uneven rounded corners */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 32px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+}
+
+.hero-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 24px 10px 32px 12px; /* Uneven rounded corners */
+    margin: 40px auto 0;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+/* About Section with Uneven Rounded Squares Design */
+.about {
+    padding: 80px 0;
+    background: #f8f9fa;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+        radial-gradient(circle at 20% 15%, rgba(102, 126, 234, 0.04) 0%, transparent 15%),
+        radial-gradient(circle at 80% 85%, rgba(240, 147, 251, 0.04) 0%, transparent 15%);
+    z-index: 0;
+}
+
+.about .container {
+    position: relative;
+    z-index: 1;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 48px;
+    color: #242424;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 20px;
+    background: #f8f9fa;
+}
+
+.about h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 80px;
     height: 4px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 2px;
 }
 
-.hero-content p {
-    font-size: clamp(18px, 4vw, 22px);
-    margin-bottom: 0;
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.about-text {
+    background: #ffffff;
+    border-radius: 28px 10px 36px 14px;
+    padding: 32px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border: 1px solid #f0f0f0;
+}
+
+.about-text p {
+    font-size: 20px;
+    margin-bottom: 28px;
+    color: #242424;
+    line-height: 1.65;
+    letter-spacing: -0.003em;
+    font-weight: 400;
+}
+
+.about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 24px 8px 32px 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    border: 1px solid #f0f0f0;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+    border-radius: 20px 6px 24px 10px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 50%, rgba(240, 147, 251, 0.05) 100%);
+    transition: transform 0.3s ease;
+}
+
+.stat:hover {
+    transform: translateY(-5px);
+}
+
+.stat h3 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+}
+
+.stat p {
+    font-size: 17px;
+    color: #6b6b6b;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Blog Section with Masonry Grid and Uneven Tiles */
+.blog {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.blog h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 48px;
+    color: #242424;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 20px;
+    background: #f8f9fa;
+}
+
+.blog h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+/* Blog Grid is now handled in blog-styles.css */
+/* Keeping only the blog section container styles here */
+
+/* Newsletter Section with Uneven Rounded Squares Design */
+.newsletter {
+    background: #f8f9fa;
+    color: #242424;
+    padding: 60px 0;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+        radial-gradient(circle at 10% 15%, rgba(102, 126, 234, 0.05) 0%, transparent 15%),
+        radial-gradient(circle at 90% 85%, rgba(240, 147, 251, 0.05) 0%, transparent 15%);
+    z-index: 0;
+}
+
+.newsletter .container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 32px 12px 40px 16px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    border: 1px solid #f0f0f0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.newsletter h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.newsletter p {
+    font-size: 18px;
+    margin-bottom: 32px;
     color: #6b6b6b;
     line-height: 1.6;
+    text-align: center;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.cta-button {
-    display: none;
-}
-
-.hero-image {
-    display: none;
-}
-
-/* About Section - Medium Style */
-.about {
-    padding: 60px 0;
-    background: #ffffff;
-    border-bottom: 1px solid #f2f2f2;
-}
-
-.about h2 {
-    text-align: left;
-    font-size: 32px;
-    margin-bottom: 32px;
-    color: #242424;
-    font-weight: 700;
-    letter-spacing: -0.4px;
-}
-
-.about-content {
-    display: block;
-}
-
-.about-text p {
-    font-size: 20px;
-    margin-bottom: 24px;
-    color: #242424;
-    line-height: 1.58;
-    letter-spacing: -0.003em;
-}
-
-.about-stats {
-    display: flex;
-    gap: 24px;
-    margin-top: 40px;
-    padding: 24px 0;
-    border-top: 1px solid #f2f2f2;
-}
-
-.stat {
-    text-align: left;
-    flex: 1;
-}
-
-.stat h3 {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 4px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing: -0.4px;
-}
-
-.stat p {
-    font-size: 16px;
-    color: #6b6b6b;
-    font-weight: 400;
-}
-
-/* Blog Section - Medium Style */
-.blog {
-    padding: 60px 0;
-    background: #ffffff;
-}
-
-.blog h2 {
-    text-align: left;
-    font-size: 32px;
-    margin-bottom: 48px;
-    color: #242424;
-    font-weight: 700;
-    letter-spacing: -0.4px;
-}
-
-.blog-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-}
-
-.blog-post {
-    background: #ffffff;
-    border-bottom: 1px solid #f2f2f2;
-    padding-bottom: 48px;
-    transition: none;
-}
-
-.blog-post:hover {
-    transform: none;
-    box-shadow: none;
-}
-
-.blog-post.featured {
-    border-bottom: 2px solid;
-    border-image: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) 1;
-    padding-bottom: 56px;
-}
-
-.post-image {
-    display: none;
-}
-
-.post-category {
-    display: inline-block;
-    background: #f2f2f2;
-    color: #6b6b6b;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 13px;
-    font-weight: 500;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.post-content {
-    padding: 0;
-}
-
-.post-content h3 {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 12px;
-    color: #242424;
-    line-height: 1.25;
-    letter-spacing: -0.4px;
-}
-
-.featured .post-content h3 {
-    font-size: 32px;
-    margin-bottom: 16px;
-    letter-spacing: -0.6px;
-}
-
-.post-content p {
-    color: #6b6b6b;
-    margin-bottom: 16px;
-    line-height: 1.58;
-    font-size: 16px;
-}
-
-.featured .post-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.post-meta {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 16px;
-    font-size: 13px;
-    color: #6b6b6b;
-    font-weight: 400;
-}
-
-.post-meta i {
-    margin-right: 4px;
-}
-
-.read-more {
-    display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
-    transition: opacity 0.2s ease;
-}
-
-.read-more:hover {
-    opacity: 0.8;
-}
-
-/* Newsletter Section - Medium Style */
-.newsletter {
-    background: #f7f4ed;
-    color: #242424;
-    padding: 48px 0;
-    border-top: 1px solid #f2f2f2;
-    border-bottom: 1px solid #f2f2f2;
-}
-
-.newsletter h2 {
-    font-size: 24px;
-    margin-bottom: 12px;
-    font-weight: 700;
-    letter-spacing: -0.4px;
-}
-
-.newsletter p {
-    font-size: 16px;
-    margin-bottom: 24px;
-    color: #6b6b6b;
-    line-height: 1.58;
-}
-
 .newsletter-form {
     display: flex;
-    max-width: 400px;
-    gap: 12px;
+    max-width: 500px;
+    gap: 16px;
+    margin: 0 auto;
 }
 
 .newsletter-form input {
     flex: 1;
-    padding: 12px 16px;
-    border: 1px solid #d9d9d9;
-    border-radius: 99em;
+    padding: 16px 20px;
+    border: 2px solid #f0f0f0;
+    border-radius: 24px 10px 16px 12px;
     font-size: 16px;
     font-family: inherit;
     background: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .newsletter-form input:focus {
     outline: none;
     border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
 }
 
 .newsletter-form button {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
     color: #ffffff;
     border: none;
-    padding: 12px 24px;
-    border-radius: 99em;
-    font-weight: 500;
+    padding: 16px 32px;
+    border-radius: 20px 8px 24px 10px;
+    font-weight: 600;
     font-size: 16px;
     cursor: pointer;
-    transition: opacity 0.2s ease;
+    transition: all 0.3s ease;
     white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
 }
 
 .newsletter-form button:hover {
-    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
 }
 
-/* Footer - Medium Style */
+/* Footer with Uneven Rounded Squares Design */
 .footer {
-    background: #ffffff;
+    background: #f8f9fa;
     color: #242424;
-    padding: 48px 0 24px;
-    border-top: 1px solid #f2f2f2;
+    padding: 60px 0 30px;
+    border-top: 1px solid #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(102, 126, 234, 0.03) 0%, transparent 12%),
+        radial-gradient(circle at 85% 80%, rgba(240, 147, 251, 0.03) 0%, transparent 12%);
+    z-index: 0;
+}
+
+.footer .container {
+    position: relative;
+    z-index: 1;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 48px;
-    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 28px 10px 36px 14px;
+    padding: 32px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
 }
 
 .footer-section h3,
 .footer-section h4 {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     color: #242424;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-section h3::after,
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
 }
 
 .footer-section p {
     color: #6b6b6b;
-    line-height: 1.58;
-    font-size: 14px;
+    line-height: 1.6;
+    font-size: 16px;
 }
 
 .footer-section ul {
@@ -509,49 +621,62 @@ body {
 }
 
 .footer-section ul li {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .footer-section ul li a {
     color: #6b6b6b;
     text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s ease;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    border-radius: 8px 4px 10px 5px;
 }
 
 .footer-section ul li a:hover {
     color: #242424;
+    background: rgba(102, 126, 234, 0.1);
+    padding-left: 8px;
 }
 
 .social-links {
     display: flex;
-    gap: 12px;
+    gap: 16px;
+    margin-top: 16px;
 }
 
 .social-links a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     background: #f2f2f2;
     color: #6b6b6b;
-    border-radius: 50%;
-    transition: all 0.2s ease;
-    font-size: 14px;
+    border-radius: 12px 6px 10px 5px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .social-links a:hover {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
     color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 24px;
-    border-top: 1px solid #f2f2f2;
+    padding-top: 30px;
+    border-top: 1px solid #f0f0f0;
     color: #6b6b6b;
-    font-size: 14px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 20px 8px 24px 10px;
+    padding: 20px;
 }
 
 /* Responsive Design - Medium Style */
@@ -667,13 +792,7 @@ body {
         font-size: 24px;
     }
     
-    .blog-grid {
-        gap: 32px;
-    }
-    
-    .blog-post {
-        padding-bottom: 32px;
-    }
+    /* Blog grid responsive styles are now in blog-styles.css */
     
     .post-content h3 {
         font-size: 20px;
@@ -865,12 +984,4 @@ html {
     }
 }
 
-.blog-post {
-    animation: fadeInUp 0.6s ease forwards;
-}
-
-.blog-post:nth-child(2) { animation-delay: 0.1s; }
-.blog-post:nth-child(3) { animation-delay: 0.2s; }
-.blog-post:nth-child(4) { animation-delay: 0.3s; }
-.blog-post:nth-child(5) { animation-delay: 0.4s; }
-.blog-post:nth-child(6) { animation-delay: 0.5s; }
+/* Animations are now handled in blog-styles.css */
