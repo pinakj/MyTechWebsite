@@ -202,5 +202,17 @@
 
     <script src="script.js"></script>
     <script src="animations.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.querySelector(".blog-grid");
+  if (!grid) return;
+  const tiles = Array.from(grid.children);
+  for (let i = tiles.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [tiles[i], tiles[j]] = [tiles[j], tiles[i]];
+  }
+  tiles.forEach(tile => grid.appendChild(tile));
+});
+</script>
 </body>
 </html>
