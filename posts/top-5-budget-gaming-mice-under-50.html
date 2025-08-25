@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Top 5 Gaming Mice Under $50 That Don’t Suck</title>
+<link href="../styles.css" rel="stylesheet"/>
+<link href="../blog-styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<style>
+/* Page-specific polish to match your mic article aesthetic */
+.article-header {
+  background: linear-gradient(135deg, #667eea 0%, #06b6d4 100%);
+  color: white; padding: 110px 0 56px; text-align:center;
+}
+.article-content { max-width: 1000px; margin: 0 auto; padding: 60px 20px; line-height: 1.8; }
+.article-meta { display:flex; justify-content:center; gap:2rem; margin-bottom:.6rem; color: rgba(255,255,255,0.9); }
+.article-updated { text-align:center; color: rgba(255,255,255,0.9); font-weight:600; margin-bottom: 1.2rem; }
+.article-content h2 { color:#111827; margin:2rem 0 1rem; font-size:1.9rem; letter-spacing:-0.01em; }
+.article-content h3 { color:#1f2937; margin:1.2rem 0 .75rem; font-size:1.35rem; }
+.article-content p { margin-bottom:1.15rem; color:#374151; }
+.back-button { display:inline-block; background:#667eea; color:white; padding:.8rem 1.4rem; text-decoration:none; border-radius:999px; margin-bottom:1.6rem; transition:background .25s ease; }
+.back-button:hover { background:#5a67d8; }
+
+/* TOC & Comparison (same vibe as improved mic page) */
+html { scroll-behavior: smooth; }
+:target::before { content:""; display:block; height:90px; margin-top:-90px; }
+.toc{ position: sticky; top: 80px; margin-bottom: 24px; }
+.toc .toc-inner{
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  border:1px solid #e5e7eb; padding:1rem 1.25rem; border-radius:14px;
+  box-shadow:0 8px 24px rgba(2,6,23,.06);
+}
+.toc strong{ font-size:.95rem; color:#0f172a; }
+.toc ul{ list-style:none; padding-left:0; margin:.65rem 0 0; display:flex; flex-wrap:wrap; gap:.5rem; }
+.toc a{ display:inline-flex; align-items:center; gap:.5rem; text-decoration:none; padding:.5rem .85rem; border-radius:999px; border:1px solid #e2e8f0; background:#fff; color:#0f172a; font-weight:600; font-size:.9rem; box-shadow:0 1px 0 rgba(2,6,23,.02); transition: transform .15s ease, box-shadow .2s ease, background .2s ease; }
+.toc a:hover{ transform: translateY(-1px); box-shadow:0 6px 16px rgba(2,6,23,.08); background:#f8fafc; }
+.toc a::before{ content:""; width:8px; height:8px; border-radius:999px; background:#6366f1; box-shadow:0 0 0 3px rgba(99,102,241,.15);}
+
+.comparison-wrap{ position:relative; background:#ffffff; border:1px solid #e5e7eb; border-radius:16px; padding:0; overflow:hidden; box-shadow:0 10px 30px rgba(2,6,23,.07); margin: 2rem 0 1.75rem; }
+.comparison-wrap h2{ margin:0; padding:1rem 1.25rem; background: radial-gradient(1200px 300px at -10% -40%, rgba(99,102,241,.18), transparent 60%), linear-gradient(90deg, #eef2ff 0%, #ecfeff 100%); border-bottom:1px solid #e5e7eb; font-size:1.1rem; letter-spacing:.02em; display:flex; align-items:center; gap:.6rem; }
+.comparison-wrap h2 i{ color:#4f46e5; }
+.table-scroll{ overflow:auto; }
+.comparison-table{ width:100%; border-collapse:separate; border-spacing:0; }
+.comparison-table th, .comparison-table td{ padding:.9rem .9rem; text-align:left; }
+.comparison-table thead th{ font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; color:#475569; position:sticky; top:0; background:#ffffff; border-bottom:1px solid #e5e7eb; }
+.comparison-table tbody tr:nth-child(odd){ background:#fafafa; }
+.comparison-table tbody tr:hover{ background:#f5f7fb; }
+.comparison-table tbody td .price-badge{ background:#10b981; color:#ffffff; padding:.25rem .5rem; border-radius:8px; font-weight:700; }
+.price-note{ display:flex; align-items:center; gap:.5rem; font-size:.9rem; color:#6b7280; padding:.75rem 1.25rem 1rem; border-top:1px dashed #e5e7eb; }
+
+/* Product grid */
+.product-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:1rem; }
+.product-card{ background:#ffffff; border-radius:12px; padding:1.25rem; box-shadow:0 1px 2px rgba(0,0,0,0.04); border:1px solid #eef2f7; }
+.product-header{ display:flex; justify-content:space-between; align-items:center; margin-bottom:.75rem; }
+.product-title{ font-size:1.15rem; font-weight:800; color:#0f172a; }
+.product-price{ background:#10b981; color:white; padding:.5rem .85rem; border-radius:10px; font-weight:700; text-decoration:none; font-size:.95rem; }
+.product-image{ width:100%; max-width:240px; height:auto; border-radius:10px; margin:.75rem 0; box-shadow:0 6px 14px rgba(0,0,0,.08); }
+.product-content{ display:flex; flex-direction:column; align-items:flex-start; text-align:left; }
+.rating{ color:#f59e0b; font-weight:700; margin:.5rem 0; }
+.pros-cons{ display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin:1rem 0; }
+.pros, .cons{ background:white; padding:1rem; border-radius:10px; border:1px solid #f1f5f9; list-style:none; }
+.pros h4{ color:#039d6f; margin-bottom:.5rem; }
+.cons h4{ color:#dc2626; margin-bottom:.5rem; }
+.pros li::before { content:"✓ "; color:#10b981; font-weight:700; }
+.cons li::before { content:"✗ "; color:#ef4444; font-weight:700; }
+@media (max-width: 900px){ .product-grid{ grid-template-columns:1fr; } .toc{ position:static; } .pros-cons{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header class="header">
+<nav class="nav">
+<div class="nav-brand">
+<a href="../index.html#home">
+<img alt="GeekyGoo logo" src="../images/geekygoo-logo.png"/>
+</a>
+</div>
+<ul class="nav-menu">
+<li><a href="../index.html#home">Home</a></li>
+<li><a href="../index.html#about">About</a></li>
+<li><a href="../index.html#blog">Blog</a></li>
+<li><a href="../index.html#contact">Contact</a></li>
+</ul>
+<div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+</header>
+<section class="article-header">
+<div class="container">
+<h1>Top 5 Gaming Mice Under $50 That Don’t Suck</h1>
+<div class="article-meta">
+<span><i class="fas fa-calendar"></i> August 22, 2025</span>
+<span><i class="fas fa-clock"></i> 7 min read</span>
+<span><i class="fas fa-tag"></i> Gaming Mice</span>
+</div>
+<div class="article-updated">Updated on August 22, 2025 • Prices checked at official stores &amp; major retailers</div>
+</div>
+</section>
+<article class="article-content">
+<a class="back-button" href="../index.html#blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+<aside class="toc">
+<div class="toc-inner">
+<strong>Jump to sections</strong>
+<ul>
+<li><a href="#g203">Logitech G203 LIGHTSYNC</a></li>
+<li><a href="#g305">Logitech G305 LIGHTSPEED</a></li>
+<li><a href="#viper-mini">Razer Viper Mini</a></li>
+<li><a href="#pulsefire-haste">HyperX Pulsefire Haste (Wired)</a></li>
+<li><a href="#rival3">SteelSeries Rival 3 Gen 2</a></li>
+</ul>
+</div>
+</aside>
+<p>Looking for a gaming mouse that nails the fundamentals without draining your wallet? These five picks deliver top‑tier value under $50, and we’ve verified current street pricing as of August 22, 2025.</p>
+<div class="comparison-wrap">
+<h2><i class="fas fa-chart-line"></i> Quick Comparison</h2>
+<div class="table-scroll">
+<table class="comparison-table">
+<thead><tr><th>#</th><th>Model</th><th>Type</th><th>Street Price*</th><th>Why we picked it</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Logitech G203 LIGHTSYNC</td><td>Wired</td><td><span class="price-badge">$29.99</span></td><td>Best overall wired budget pick (reliable sensor, RGB, wide availability)</td></tr>
+<tr><td>2</td><td>Logitech G305 LIGHTSPEED</td><td>Wireless (2.4 GHz)</td><td><span class="price-badge">$39.99</span></td><td>Rare quality wireless under $50; great battery life</td></tr>
+<tr><td>3</td><td>Razer Viper Mini</td><td>Wired</td><td><span class="price-badge">$20–$30</span></td><td>Ultra‑light 61 g body with crisp optical switches</td></tr>
+<tr><td>4</td><td>HyperX Pulsefire Haste (Wired)</td><td>Wired</td><td><span class="price-badge">$19.99–$49.99</span></td><td>Featherweight 59 g honeycomb shell, strong value</td></tr>
+<tr><td>5</td><td>SteelSeries Rival 3 Gen 2</td><td>Wired</td><td><span class="price-badge">$49.99</span></td><td>Comfortable shape, dependable TrueMove sensor</td></tr>
+</tbody>
+</table>
+</div>
+<div class="price-note"><i class="fas fa-clock"></i> *Street prices fluctuate by retailer and sales. We checked these on August 22, 2025.</div>
+</div>
+<h2>The Top 5</h2>
+<div class="product-grid">
+<div class="product-card" id="g203">
+<div class="product-content">
+<img alt="Logitech G203 LIGHTSYNC" class="product-image" src="images/g203.jpeg"/>
+<div class="product-header">
+<h3 class="product-title">1. Logitech G203 LIGHTSYNC</h3>
+<a class="product-price" href="https://www.logitechg.com/en-us/products/gaming-mice/g203-lightsync-rgb-mouse.910-005791.html" rel="noopener" target="_blank">$29.99</a>
+</div>
+</div>
+<div class="rating">★★★★☆ 4.6/5</div>
+<p>Perennial budget champ with dependable tracking, RGB, and a comfy shell. Great all‑rounder for FPS and everyday gaming.</p>
+<div class="pros-cons">
+<ul class="pros">
+<h4>Pros</h4>
+<li>Consistent sensor &amp; low click latency</li>
+<li>Durable 6‑button layout</li>
+<li>Multiple colors widely available</li>
+</ul>
+<ul class="cons">
+<h4>Cons</h4>
+<li>Rubber cable drag</li>
+<li>Not the lightest</li>
+</ul>
+</div>
+</div>
+<div class="product-card" id="g305">
+<div class="product-content">
+<img alt="Logitech G305 LIGHTSPEED" class="product-image" src="images/g305.jpeg"/>
+<div class="product-header">
+<h3 class="product-title">2. Logitech G305 LIGHTSPEED (Wireless)</h3>
+<a class="product-price" href="https://www.logitechg.com/en-us/products/gaming-mice/g305-lightspeed-wireless-gaming-mouse.910-005280.html" rel="noopener" target="_blank">$39.99</a>
+</div>
+</div>
+<div class="rating">★★★★★ 4.7/5</div>
+<p>Quality wireless under $50: fast LIGHTSPEED link, HERO sensor, and ~250‑hour AA battery life.</p>
+<div class="pros-cons">
+<ul class="pros">
+<h4>Pros</h4>
+<li>Excellent wireless performance</li>
+<li>Long battery life on a single AA</li>
+<li>Onboard memory &amp; 6 programmable buttons</li>
+</ul>
+<ul class="cons">
+<h4>Cons</h4>
+<li>Heavier due to AA</li>
+<li>No Bluetooth</li>
+</ul>
+</div>
+</div>
+<div class="product-card" id="viper-mini">
+<div class="product-content">
+<img alt="Razer Viper Mini" class="product-image" src="images/viper-mini.jpeg"/>
+<div class="product-header">
+<h3 class="product-title">3. Razer Viper Mini</h3>
+<a class="product-price" href="https://www.razer.com/gaming-mice/razer-viper-mini" rel="noopener" target="_blank">$20–$30</a>
+</div>
+</div>
+<div class="rating">★★★★☆ 4.5/5</div>
+<p>61 g ultralight with optical switches and smooth cable—still a darling in the budget scene.</p>
+<div class="pros-cons">
+<ul class="pros">
+<h4>Pros</h4>
+<li>Very light &amp; agile</li>
+<li>Optical switches feel crisp</li>
+<li>Great sale pricing</li>
+</ul>
+<ul class="cons">
+<h4>Cons</h4>
+<li>Small shell; not ideal for large hands</li>
+<li>Availability varies</li>
+</ul>
+</div>
+</div>
+<div class="product-card" id="pulsefire-haste">
+<div class="product-content">
+<img alt="HyperX Pulsefire Haste (Wired)" class="product-image" src="images/pulsefire-haste.jpeg"/>
+<div class="product-header">
+<h3 class="product-title">4. HyperX Pulsefire Haste (Wired)</h3>
+<a class="product-price" href="https://hyperx.com/products/hyperx-pulsefire-haste-gaming-mouse" rel="noopener" target="_blank">$19.99–$49.99</a>
+</div>
+</div>
+<div class="rating">★★★★☆ 4.6/5</div>
+<p>Featherweight 59 g honeycomb with PTFE feet and flexible cable—fast, controllable, and often on sale.</p>
+<div class="pros-cons">
+<ul class="pros">
+<h4>Pros</h4>
+<li>Super light with smooth glide</li>
+<li>Reliable switches</li>
+<li>Great value when discounted</li>
+</ul>
+<ul class="cons">
+<h4>Cons</h4>
+<li>Honeycomb shell isn’t for everyone</li>
+<li>Software can be finicky</li>
+</ul>
+</div>
+</div>
+<div class="product-card" id="rival3">
+<div class="product-content">
+<img alt="SteelSeries Rival 3 Gen 2" class="product-image" src="images/rival3.jpeg"/>
+<div class="product-header">
+<h3 class="product-title">5. SteelSeries Rival 3 Gen 2 (Wired)</h3>
+<a class="product-price" href="https://steelseries.com/gaming-mice/rival-3-gen-2" rel="noopener" target="_blank">$49.99</a>
+</div>
+</div>
+<div class="rating">★★★★☆ 4.4/5</div>
+<p>Comfortable everyday shape, improved switches, and dependable tracking—solid at the $50 ceiling.</p>
+<div class="pros-cons">
+<ul class="pros">
+<h4>Pros</h4>
+<li>Comfortable, proven shape</li>
+<li>TrueMove sensor consistency</li>
+<li>Durable for daily use</li>
+</ul>
+<ul class="cons">
+<h4>Cons</h4>
+<li>Heavier than ultralights</li>
+<li>Basic cable</li>
+</ul>
+</div>
+</div>
+</div><!-- /product-grid -->
+
+<section class="comparison-wrap" id="g502-compare" style="margin-top:2rem;">
+<h2><i class="fas fa-arrow-up-right-from-square"></i> Upgrade Pick: Logitech G502 HERO (vs Budget Picks)</h2>
+<div class="table-scroll">
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Model</th>
+<th>Type</th>
+<th>Weight</th>
+<th>Buttons</th>
+<th>Sensor</th>
+<th>Typical Price*</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Logitech G502 HERO</strong></td>
+<td>Wired</td>
+<td>121–168 g (with weights)</td>
+<td>11 + tilt scroll</td>
+<td>HERO 25K</td>
+<td><span class="price-badge">$44–$62</span></td>
+<td>MMO/MOBA, productivity macros, ergonomic comfort</td>
+</tr>
+<tr>
+<td>Logitech G203 LIGHTSYNC</td>
+<td>Wired</td>
+<td>≈85–87 g</td>
+<td>6</td>
+<td>8K DPI class</td>
+<td><span class="price-badge">$29.99</span></td>
+<td>General use, budget FPS</td>
+</tr>
+<tr>
+<td>Logitech G305 LIGHTSPEED</td>
+<td>Wireless 2.4 GHz</td>
+<td>≈99 g (with AA)</td>
+<td>6</td>
+<td>HERO</td>
+<td><span class="price-badge">$39.99</span></td>
+<td>Wireless on a budget, all‑round</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="price-note"><i class="fas fa-clock"></i> *Prices checked August 22, 2025. G502 HERO varies by retailer/sales.</div>
+<p style="font-size:.95rem;color:#475569;padding:0 1.25rem 1rem;">Summary: G502 HERO is a fantastic ergonomic mouse with a top‑tier sensor and deep customizability, but it’s <em>much heavier</em> than budget picks. If you value lightweight flicks for FPS, stick to G203/G305; if you want extra buttons and comfort for long sessions or MMO/MOBA, the G502 HERO is worth the bump in price.</p>
+</section>
+<h2>Notes on Price &amp; Availability</h2>
+<p>All models above routinely sell for under $50 as of August 22, 2025. Pricing changes by color/edition and retailer promos. If a specific color sits over $50, check another color or wait for a sale.</p>
+</article>
+<section class="newsletter">
+<div class="container">
+<h2>Want More Reviews Like This?</h2>
+<p>Get the latest budget gaming gear reviews delivered to your inbox</p>
+<form class="newsletter-form">
+<input placeholder="Enter your email" required="" type="email"/>
+<button type="submit">Subscribe</button>
+</form>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<h3>GeekyGoo</h3>
+<p>Honest reviews, practical guides, and insider tips for tech and gaming enthusiasts.</p>
+</div>
+<div class="footer-section">
+<h4>Categories</h4>
+<ul>
+<li><a href="../index.html#blog">Gaming Peripherals</a></li>
+<li><a href="../index.html#blog">PC Hardware</a></li>
+<li><a href="../index.html#blog">Audio Equipment</a></li>
+<li><a href="../index.html#blog">Buying Guides</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Connect</h4>
+<div class="social-links">
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+<a href="#"><i class="fab fa-discord"></i></a>
+<a href="#"><i class="fab fa-reddit"></i></a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2025 GeekyGoo. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>
