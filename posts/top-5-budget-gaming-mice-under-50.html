@@ -72,18 +72,44 @@ html { scroll-behavior: smooth; }
 <body>
 <header class="header">
 <nav class="nav">
-<div class="nav-brand">
-<a href="../index.html#home">
-<img alt="GeekyGoo logo" src="../images/geekygoo-logo.png"/>
+<div class="nav-left">
+<a class="logo-link" href="/index.html">
+<div class="logo">
+<svg fill="none" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="logoGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#667eea"></stop>
+<stop offset="50%" style="stop-color:#764ba2"></stop>
+<stop offset="100%" style="stop-color:#f093fb"></stop>
+</lineargradient>
+</defs>
+<rect fill="url(#logoGradient)" height="20" rx="4" width="28" x="2" y="6"></rect>
+<circle cx="8" cy="12" fill="white" r="2"></circle>
+<circle cx="24" cy="12" fill="white" r="2"></circle>
+<rect fill="white" height="6" rx="2" width="4" x="6" y="18"></rect>
+<rect fill="white" height="6" rx="2" width="4" x="22" y="18"></rect>
+<rect fill="white" height="2" rx="1" width="8" x="12" y="20"></rect>
+</svg>
+</div>
+<h1>GeekyGoo</h1>
 </a>
 </div>
+<div class="search-container-fixed">
+<div class="search-box">
+<i class="fas fa-search"></i>
+<input class="search-input" type="text"/>
+</div>
+</div>
 <ul class="nav-menu">
-<li><a href="../index.html#home">Home</a></li>
-<li><a href="../index.html#about">About</a></li>
-<li><a href="../index.html#blog">Blog</a></li>
-<li><a href="../index.html#contact">Contact</a></li>
+<li><a href="/index.html#home">Home</a></li>
+<li><a href="/index.html#blog">Reviews</a></li>
+<li><a href="/index.html#newsletter">Newsletter</a></li>
 </ul>
-<div class="hamburger"><span></span><span></span><span></span></div>
+<div class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
 </nav>
 </header>
 <section class="article-header">
@@ -251,7 +277,6 @@ html { scroll-behavior: smooth; }
 </div>
 </div>
 </div><!-- /product-grid -->
-
 <section class="comparison-wrap" id="g502-compare" style="margin-top:2rem;">
 <h2><i class="fas fa-arrow-up-right-from-square"></i> Upgrade Pick: Logitech G502 HERO (vs Budget Picks)</h2>
 <div class="table-scroll">

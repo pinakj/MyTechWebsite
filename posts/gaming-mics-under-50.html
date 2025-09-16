@@ -217,16 +217,44 @@ html { scroll-behavior: smooth; }
 <body>
 <header class="header">
 <nav class="nav">
-<div class="nav-brand">
-<h1><i class="fas fa-gamepad"></i>Geeky Goo</h1>
+<div class="nav-left">
+<a class="logo-link" href="/index.html">
+<div class="logo">
+<svg fill="none" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="logoGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#667eea"></stop>
+<stop offset="50%" style="stop-color:#764ba2"></stop>
+<stop offset="100%" style="stop-color:#f093fb"></stop>
+</lineargradient>
+</defs>
+<rect fill="url(#logoGradient)" height="20" rx="4" width="28" x="2" y="6"></rect>
+<circle cx="8" cy="12" fill="white" r="2"></circle>
+<circle cx="24" cy="12" fill="white" r="2"></circle>
+<rect fill="white" height="6" rx="2" width="4" x="6" y="18"></rect>
+<rect fill="white" height="6" rx="2" width="4" x="22" y="18"></rect>
+<rect fill="white" height="2" rx="1" width="8" x="12" y="20"></rect>
+</svg>
+</div>
+<h1>GeekyGoo</h1>
+</a>
+</div>
+<div class="search-container-fixed">
+<div class="search-box">
+<i class="fas fa-search"></i>
+<input class="search-input" type="text"/>
+</div>
 </div>
 <ul class="nav-menu">
-<li><a href="../index.html#home">Home</a></li>
-<li><a href="../index.html#about">About</a></li>
-<li><a href="../index.html#blog">Blog</a></li>
-<li><a href="../index.html#contact">Contact</a></li>
+<li><a href="/index.html#home">Home</a></li>
+<li><a href="/index.html#blog">Reviews</a></li>
+<li><a href="/index.html#newsletter">Newsletter</a></li>
 </ul>
-<div class="hamburger"><span></span><span></span><span></span></div>
+<div class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
 </nav>
 </header>
 <section class="article-header">
@@ -250,7 +278,7 @@ html { scroll-behavior: smooth; }
 <li><a href="#razer-seiren-v3-mini-ultra-compact-usb-microphone">Razer Seiren V3 Mini</a></li>
 <li><a href="#fifine-k669b-usb-condenser-microphone">FIFINE K669B</a></li>
 <li><a href="#tonor-tc-777-pro-rgb-usb-microphone-complete-kit">TONOR TC‑777 PRO RGB</a></li>
-<li><a href="#jlab-talk-go-usb-microphone">JLab Talk GO</a></li>
+<li><a href="#yeti-orb-usb-microphone">Blue Yeti Orb</a></li>
 </ul>
 </div>
 </aside>
@@ -265,7 +293,7 @@ html { scroll-behavior: smooth; }
 <tr><td>Razer Seiren V3 Mini Ultra‑Compact USB Microphone</td><td><strong>$59.99</strong></td><td>4.6/5 - Best Compact</td></tr>
 <tr><td>FIFINE K669B USB Condenser Microphone</td><td><strong>$29.99</strong></td><td>4.5/5 - Best Value</td></tr>
 <tr><td>TONOR TC‑777 PRO RGB USB Microphone (Complete Kit)</td><td><strong>$34.99</strong></td><td>4.4/5 - Best Starter Kit</td></tr>
-<tr><td>JLab Talk GO USB Microphone</td><td><strong>$49.00</strong></td><td>4.3/5 - Most Portable</td></tr>
+<tr><td>"Logitech G Yeti Orb USB Microphone</td><td><strong>$59.99</strong></td><td>4.4/5 - Most Portable</td></tr>
 </tbody>
 </table>
 </div>
@@ -286,7 +314,7 @@ html { scroll-behavior: smooth; }
 <div class="product-content">
 <img alt="HyperX SoloCast USB Condenser Gaming Microphone" class="product-image" src="images/hyperx.jpeg"/>
 <h3 class="product-title" id="hyperx-solocast-usb-condenser-gaming-microphone">1. HyperX SoloCast USB Condenser Gaming Microphone</h3>
-<a class="product-price" href="https://www.bestbuy.com/site/hyperx-solocast-wired-cardioid-usb-condenser-gaming-microphone-black/6434293.p?skuId=6434293" rel="noopener" target="_blank">$59.99</a>
+<a class="product-price" data-asin="B08KFL3SFV" data-source="amazon" href="https://amzn.to/426NHYs" id="price-hyperx-solocast" rel="noopener" target="_blank">Loading…</a>
 </div>
 <div class="rating">
 <span class="stars">★★★★★</span>
@@ -317,7 +345,7 @@ html { scroll-behavior: smooth; }
 <div class="product-content">
 <img alt="Razer Seiren V3 Mini Ultra‑Compact USB Microphone" class="product-image" src="images/razer.jpeg"/>
 <h3 class="product-title" id="razer-seiren-v3-mini-ultra-compact-usb-microphone">2. Razer Seiren V3 Mini Ultra‑Compact USB Microphone</h3>
-<a class="product-price" href="https://www.bestbuy.com/site/razer-seiren-v3-mini-wired-ultra-compact-condenser-usb-microphone-black/6573619.p?skuId=6573619" rel="noopener" target="_blank">$59.99</a>
+<a class="product-price" data-asin="B0CT787NLW" data-source="amazon" href="https://amzn.to/4g0SfWl" id="price-razer-v3-mini" rel="noopener" target="_blank">Loading…</a>
 </div>
 <div class="rating">
 <span class="stars">★★★★☆</span>
@@ -347,7 +375,7 @@ html { scroll-behavior: smooth; }
 <div class="product-content">
 <img alt="FIFINE K669B USB Condenser Microphone" class="product-image" src="images/fifine.jpeg"/>
 <h3 class="product-title" id="fifine-k669b-usb-condenser-microphone">3. FIFINE K669B USB Condenser Microphone</h3>
-<a class="product-price" href="https://fifinemicrophone.com/products/fifine-k669-669b-usb-microphone" rel="noopener" target="_blank">$29.99</a>
+<a class="product-price" data-asin="B0BMFQP2ZZ" data-source="amazon" href="https://amzn.to/4g2lfwA" id="price-fifine-am8" rel="noopener" target="_blank">Loading…</a>
 </div>
 <div class="rating">
 <span class="stars">★★★★☆</span>
@@ -377,7 +405,7 @@ html { scroll-behavior: smooth; }
 <div class="product-content">
 <img alt="TONOR TC‑777 PRO RGB USB Microphone (Complete Kit)" class="product-image" src="images/todor.jpeg"/>
 <h3 class="product-title" id="tonor-tc-777-pro-rgb-usb-microphone-complete-kit">4. TONOR TC‑777 PRO RGB USB Microphone (Complete Kit)</h3>
-<a class="product-price" href="https://www.tonormic.com/products/tc-777-pro-rgb-usb-microphone" rel="noopener" target="_blank">$34.99</a>
+<a class="product-price" data-asin="B07WLWN2ZT" data-source="amazon" href="https://amzn.to/3UQHSdU" id="price-tonor-tc777" rel="noopener" target="_blank">Loading…</a>
 </div>
 <div class="rating">
 <span class="stars">★★★★☆</span>
@@ -405,35 +433,37 @@ html { scroll-behavior: smooth; }
 </div>
 <div class="product-card">
 <div class="product-content">
-<img alt="JLab Talk GO USB Microphone" class="product-image" src="images/jlab.jpeg"/>
-<h3 class="product-title" id="jlab-talk-go-usb-microphone">5. JLab Talk GO USB Microphone</h3>
-<a class="product-price" href="https://www.jlab.com/products/talk-go-usb-microphone-black" rel="noopener" target="_blank">$49.00</a>
+<img alt="Logitech G Yeti Orb USB Microphone" class="product-image" src="images/yeti.jpg"/>
+<h3 class="product-title" id="yeti-orb-usb-microphone">5. Blue Yeti Orb USB Microphone</h3>
+<a class="product-price" data-asin="B0CGLCWH5M" data-source="amazon" href="https://amzn.to/45VeurR" id="price-yeti-orb" rel="noopener" target="_blank">Loading…</a>
 </div>
 <div class="rating">
 <span class="stars">★★★★☆</span>
-<span>4.3/5 - Most Portable</span>
+<span>4.4/5 - Most Portable</span>
 </div>
-<p>Lightweight mic with 24‑bit/96kHz capture and two patterns (cardioid/omni). Great pick for travel and multipurpose use.</p>
+<p>Compact and stylish USB microphone from Blue. Simple setup, plug‑and‑play design, and trusted Yeti sound in a smaller form factor.</p>
 <div class="pros-cons">
 <div class="pros">
 <h4>Pros</h4>
 <ul>
-<li>24‑bit/96kHz capture</li>
-<li>Cardioid &amp; omni patterns</li>
-<li>On‑mic mute &amp; volume</li>
+<li>Reliable Blue Yeti sound quality</li>
+<li>Simpler, compact form factor</li>
+<li>Plug‑and‑play with USB‑C</li>
 </ul>
 </div>
 <div class="cons">
 <h4>Cons</h4>
 <ul>
-<li>Stand is basic</li>
-<li>Less bass body than larger condensers</li>
+<li>No multiple pickup patterns</li>
+<li>Fewer onboard controls</li>
 </ul>
 </div>
 </div>
-<p><strong>Best for:</strong> Laptop gamers and students who need a mic for gaming, calls, and classes.</p>
+<p><strong>Best for:</strong> Gamers and streamers who want Yeti quality in a smaller, budget‑friendly package.</p>
 </div>
-</div> <!-- /product-grid -->
+</div>
+
+ <!-- /product-grid -->
 <h2>Testing Methodology</h2>
 <p>Each microphone was tested using the same setup and conditions:</p>
 <ul>
@@ -443,8 +473,8 @@ html { scroll-behavior: smooth; }
 <li><strong>Comparison baseline:</strong> Blue Yeti Nano ($100) and built-in laptop microphone</li>
 </ul>
 <h2>Final Recommendations</h2>
-<p>For most gamers, I recommend the <strong>FIFINE K669B</strong> as the best overall choice. It offers the perfect balance of audio quality, build quality, and ease of use. The sound quality is genuinely impressive for under $60, and it's built to last.</p>
-<p>If portability is your priority, go with the <strong>Samson Go Mic</strong>. It's perfect for laptop gaming and travel, though you'll sacrifice some audio quality for the convenience.</p>
+<p>For most gamers, I recommend the <strong>Blue Yeti Orb</strong> as the best overall choice. It offers the perfect balance of audio quality, build quality, and ease of use. The sound quality is genuinely impressive for under $60, and it's built to last.</p>
+<p>If portability is your priority, go with the <strong>Samson Go Mic</strong>. It's perfect for laptop gaming and travel.</p>
 <p>Budget-conscious users should consider the <strong>Neewer NW-700</strong>, but be prepared for a slightly more complex setup process.</p>
 <h2>Tips for Getting the Best Performance</h2>
 <ul>
@@ -497,5 +527,38 @@ html { scroll-behavior: smooth; }
 </div>
 </footer>
 <script src="../script.js"></script>
+<script>
+(function () {
+  const PRICE_SELECTOR = '.product-price[data-source="amazon"][data-asin]';
+  const nodes = Array.from(document.querySelectorAll(PRICE_SELECTOR));
+  if (!nodes.length) return;
+
+  const asins = nodes.map(n => n.dataset.asin);
+
+  fetch('/api/amazon-prices?asins=' + encodeURIComponent(asins.join(',')))
+    .then(r => r.json())
+    .then(data => {
+      const fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+      nodes.forEach(n => {
+        const asin = n.dataset.asin;
+        const item = data[asin];
+        if (item && typeof item.amount === 'number') {
+          n.textContent = fmt.format(item.amount);
+        } else {
+          n.textContent = 'See current price';
+        }
+      });
+      const note = document.querySelector('.price-note');
+      if (note) {
+        const d = new Date();
+        const dateStr = d.toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+        note.textContent = `Prices are dynamic and can change at any time. Last checked ${dateStr}.`;
+      }
+    })
+    .catch(() => {
+      nodes.forEach(n => (n.textContent = 'See current price'));
+    });
+})();
+</script>
 </body>
 </html>

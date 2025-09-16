@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The $600 Gaming PC Build (2025) — Smart Picks for Every Part</title>
+<link href="../styles.css" rel="stylesheet"/>
+<link href="../blog-styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<style>
+/* Page-specific polish consistent with your other articles */
+.article-header {
+  background: linear-gradient(135deg, #667eea 0%, #06b6d4 100%);
+  color: white; padding: 110px 0 56px; text-align:center;
+}
+.article-content { max-width: 1100px; margin: 0 auto; padding: 60px 20px; line-height: 1.8; }
+.article-meta { display:flex; justify-content:center; gap:2rem; margin-bottom:.6rem; color: rgba(255,255,255,0.9); }
+.article-updated { text-align:center; color: rgba(255,255,255,0.9); font-weight:600; margin-bottom: 1.2rem; }
+.article-content h2 { color:#111827; margin:2rem 0 1rem; font-size:1.9rem; letter-spacing:-0.01em; }
+.article-content h3 { color:#1f2937; margin:1.2rem 0 .75rem; font-size:1.35rem; }
+.article-content p { margin-bottom:1.05rem; color:#374151; }
+.back-button { display:inline-block; background:#667eea; color:white; padding:.8rem 1.4rem; text-decoration:none; border-radius:999px; margin-bottom:1.6rem; transition:background .25s ease; }
+.back-button:hover { background:#5a67d8; }
+html { scroll-behavior:smooth; }
+:target::before { content:""; display:block; height:90px; margin-top:-90px; }
+
+/* TOC */
+.toc{ position: sticky; top: 80px; margin-bottom: 24px; }
+.toc .toc-inner{
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  border:1px solid #e5e7eb; padding:1rem 1.25rem; border-radius:14px;
+  box-shadow:0 8px 24px rgba(2,6,23,.06);
+}
+.toc strong{ font-size:.95rem; color:#0f172a; }
+.toc ul{ list-style:none; padding-left:0; margin:.65rem 0 0; display:flex; flex-wrap:wrap; gap:.5rem; }
+.toc a{ display:inline-flex; align-items:center; gap:.5rem; text-decoration:none; padding:.5rem .85rem; border-radius:999px; border:1px solid #e2e8f0; background:#fff; color:#0f172a; font-weight:600; font-size:.9rem; box-shadow:0 1px 0 rgba(2,6,23,.02); transition: transform .15s ease, box-shadow .2s ease, background .2s ease; }
+.toc a:hover{ transform: translateY(-1px); box-shadow:0 6px 16px rgba(2,6,23,.08); background:#f8fafc; }
+.toc a::before{ content:""; width:8px; height:8px; border-radius:999px; background:#6366f1; box-shadow:0 0 0 3px rgba(99,102,241,.15);}
+
+/* Quick Build table */
+.card{ background:#fff; border:1px solid #e5e7eb; border-radius:16px; overflow:hidden; box-shadow:0 10px 30px rgba(2,6,23,.07); }
+.comparison-wrap{ margin: 2rem 0 1.75rem; }
+.comparison-wrap h2{ margin:0; padding:1rem 1.25rem; background: radial-gradient(1200px 300px at -10% -40%, rgba(99,102,241,.18), transparent 60%), linear-gradient(90deg, #eef2ff 0%, #ecfeff 100%); border-bottom:1px solid #e5e7eb; font-size:1.1rem; letter-spacing:.02em; display:flex; align-items:center; gap:.6rem; }
+.comparison-wrap h2 i{ color:#4f46e5; }
+.table-scroll{ overflow:auto; }
+.comparison-table{ width:100%; border-collapse:separate; border-spacing:0; }
+.comparison-table th, .comparison-table td{ padding:.8rem .85rem; text-align:left; vertical-align:top; }
+.comparison-table thead th{ font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; color:#475569; position:sticky; top:0; background:#ffffff; border-bottom:1px solid #e5e7eb; }
+.comparison-table tbody tr:nth-child(odd){ background:#fafafa; }
+.comparison-table tbody tr:hover{ background:#f5f7fb; }
+.badge{ display:inline-block; padding:.25rem .5rem; border-radius:8px; font-weight:700; }
+.badge.price{ background:#10b981; color:#fff; }
+.badge.alt{ background:#e2e8f0; color:#0f172a; }
+.link-row a{ display:inline-block; margin-right:.5rem; text-decoration:none; color:#1d4ed8; }
+.link-row a:hover{ text-decoration:underline; }
+
+/* Part cards */
+.grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:1rem; }
+.part-card{ background:#ffffff; border-radius:12px; padding:1.1rem; box-shadow:0 1px 2px rgba(0,0,0,0.04); border:1px solid #eef2f7; }
+.part-card h3{ margin-top:0; }
+.part-card .img{ width:100%; max-width:260px; height:auto; border-radius:10px; margin:.4rem 0 .8rem; box-shadow:0 6px 14px rgba(0,0,0,.08); }
+.opts{
+  display:grid; grid-template-columns:1fr; gap:.5rem;
+}
+.opt{ border:1px dashed #e5e7eb; border-radius:10px; padding:.6rem .7rem; background:#fafcff; }
+.opt strong{ color:#0f172a; }
+.note{ font-size:.92rem; color:#6b7280; }
+.kicker{ font-size:.95rem; color:#0f172a; font-weight:600; }
+@media (max-width: 900px){ .grid{ grid-template-columns:1fr; } .toc{ position:static; } }
+</style>
+</head>
+<body>
+<header class="header">
+<nav class="nav">
+<div class="nav-left">
+<a class="logo-link" href="/index.html">
+<div class="logo">
+<svg fill="none" height="32" viewbox="0 0 32 32" width="32" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="logoGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#667eea"></stop>
+<stop offset="50%" style="stop-color:#764ba2"></stop>
+<stop offset="100%" style="stop-color:#f093fb"></stop>
+</lineargradient>
+</defs>
+<rect fill="url(#logoGradient)" height="20" rx="4" width="28" x="2" y="6"></rect>
+<circle cx="8" cy="12" fill="white" r="2"></circle>
+<circle cx="24" cy="12" fill="white" r="2"></circle>
+<rect fill="white" height="6" rx="2" width="4" x="6" y="18"></rect>
+<rect fill="white" height="6" rx="2" width="4" x="22" y="18"></rect>
+<rect fill="white" height="2" rx="1" width="8" x="12" y="20"></rect>
+</svg>
+</div>
+<h1>GeekyGoo</h1>
+</a>
+</div>
+<div class="search-container-fixed">
+<div class="search-box">
+<i class="fas fa-search"></i>
+<input class="search-input" type="text"/>
+</div>
+</div>
+<ul class="nav-menu">
+<li><a href="/index.html#home">Home</a></li>
+<li><a href="/index.html#blog">Reviews</a></li>
+<li><a href="/index.html#newsletter">Newsletter</a></li>
+</ul>
+<div class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</nav>
+</header>
+<section class="article-header">
+<div class="container">
+<h1>The $600 Gaming PC Build (2025)</h1>
+<div class="article-meta">
+<span><i class="fas fa-calendar"></i> August 25, 2025</span>
+<span><i class="fas fa-clock"></i> 8 min read</span>
+<span><i class="fas fa-tag"></i> PC Builds</span>
+</div>
+<div class="article-updated">Updated on August 25, 2025 • Prices checked at major US retailers</div>
+</div>
+</section>
+<article class="article-content">
+<a class="back-button" href="../index.html#blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+<aside class="toc">
+<div class="toc-inner">
+<strong>Jump to sections</strong>
+<ul>
+<li><a href="#quick-build">Quick Build</a></li>
+<li><a href="#cpu">CPU Options</a></li>
+<li><a href="#gpu">Graphics Card Options</a></li>
+<li><a href="#mobo">Motherboard</a></li>
+<li><a href="#ram">Memory</a></li>
+<li><a href="#storage">Storage</a></li>
+<li><a href="#psu">Power Supply</a></li>
+<li><a href="#case">Case &amp; Cooling</a></li>
+<li><a href="#upgrades">Smart Upgrades Later</a></li>
+</ul>
+</div>
+</aside>
+<p>Here’s a balanced <strong>$600 gaming PC</strong> that targets smooth 1080p performance in today’s games, with sensible paths to upgrade later. Prices fluctuate—so I list a <em>primary pick</em> and solid <em>alternatives</em> for each part to help you stay on budget without buying junk.</p>
+<section class="comparison-wrap card" id="quick-build">
+<h2><i class="fas fa-screwdriver-wrench"></i> Quick Build — Target: $600 (street prices)</h2>
+<div class="table-scroll">
+<table class="comparison-table">
+<thead><tr><th>Part</th><th>Primary Pick</th><th>Street Price*</th><th>Alternatives (similar $)</th></tr></thead>
+<tbody>
+<tr>
+<td>CPU</td>
+<td>
+<strong>Ryzen 5 5600</strong><br/>
+<div class="link-row">
+<a href="https://www.amd.com/en/products/cpu/amd-ryzen-5-5600" rel="noopener" target="_blank">AMD</a>
+<a href="https://www.amazon.com/s?k=ryzen+5+5600" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=ryzen+5+5600" rel="noopener" target="_blank">Newegg</a>
+</div>
+</td>
+<td><span class="badge price">$105–$120</span></td>
+<td class="note">
+              Ryzen 5 5500 — 
+              <a href="https://www.amd.com/en/products/cpu/amd-ryzen-5-5500" rel="noopener" target="_blank">AMD</a> ·
+              <a href="https://www.amazon.com/s?k=ryzen+5+5500" rel="noopener" target="_blank">Amazon</a> ·
+              <a href="https://www.newegg.com/p/pl?d=ryzen+5+5500" rel="noopener" target="_blank">Newegg</a><br/>
+              Intel Core i3‑12100F — 
+              <a href="https://www.intel.com/content/www/us/en/products/sku/134599/intel-core-i312100f-processor-12m-cache-up-to-4-30-ghz/specifications.html" rel="noopener" target="_blank">Intel</a> ·
+              <a href="https://www.amazon.com/s?k=Intel+i3-12100F" rel="noopener" target="_blank">Amazon</a> ·
+              <a href="https://www.newegg.com/p/pl?d=i3+12100F" rel="noopener" target="_blank">Newegg</a>
+</td>
+</tr>
+<tr>
+<td>GPU</td>
+<td>
+<strong>Radeon RX 6600 8GB</strong><br/>
+<div class="link-row">
+<a href="https://www.amd.com/en/products/graphics/amd-radeon-rx-6600" rel="noopener" target="_blank">AMD</a>
+<a href="https://www.amazon.com/s?k=rx+6600" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=rx+6600" rel="noopener" target="_blank">Newegg</a>
+</div>
+</td>
+<td><span class="badge price">$170–$200</span></td>
+<td class="note">
+              RX 6650 XT — 
+              <a href="https://www.amd.com/en/products/graphics/amd-radeon-rx-6650-xt" rel="noopener" target="_blank">AMD</a> ·
+              <a href="https://www.amazon.com/s?k=rx+6650+xt" rel="noopener" target="_blank">Amazon</a> ·
+              <a href="https://www.newegg.com/p/pl?d=rx+6650+xt" rel="noopener" target="_blank">Newegg</a>
+</td>
+</tr>
+<tr>
+<td>Motherboard</td>
+<td>
+<strong>MSI B550M PRO‑VDH WiFi (mATX)</strong><br/>
+<div class="link-row">
+<a href="https://us.msi.com/Motherboard/B550M-PRO-VDH-WIFI/Overview" rel="noopener" target="_blank">MSI</a>
+<a href="https://www.amazon.com/s?k=MSI+B550M+PRO-VDH+WiFi" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=B550M+PRO-VDH+WiFi" rel="noopener" target="_blank">Newegg</a>
+</div>
+</td>
+<td><span class="badge price">$100–$110</span></td>
+<td class="note">Any reputable B550 mATX board in this range (ASUS, Gigabyte, ASRock).</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>
+<strong>16GB (2x8) DDR4‑3200</strong><br/>
+<div class="link-row">
+<a href="https://www.crucial.com/memory/ddr4" rel="noopener" target="_blank">Crucial</a>
+<a href="https://www.corsair.com/us/en/c/memory/vengeance-lpx?filters=dramspeed%3ADDR4" rel="noopener" target="_blank">Corsair</a>
+<a href="https://www.teamgroupinc.com/en/product/elt-ddr4" rel="noopener" target="_blank">TeamGroup</a>
+<a href="https://www.amazon.com/s?k=16GB+DDR4+3200+kit" rel="noopener" target="_blank">Amazon</a>
+</div>
+</td>
+<td><span class="badge price">$30–$40</span></td>
+<td class="note">CL16–22 kits; dual‑channel only (2×8GB).</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>
+<strong>1TB NVMe (PCIe 4.0) — WD Black SN770</strong><br/>
+<div class="link-row">
+<a href="https://www.westerndigital.com/products/internal-drives/wd-black-sn770-nvme-ssd" rel="noopener" target="_blank">WD</a>
+<a href="https://www.amazon.com/s?k=WD+Black+SN770+1TB" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=SN770+1TB" rel="noopener" target="_blank">Newegg</a>
+</div>
+</td>
+<td><span class="badge price">$55–$70</span></td>
+<td class="note">
+              Crucial P3 Plus / P5 Plus — 
+              <a href="https://www.crucial.com/ssd/p3-plus" rel="noopener" target="_blank">P3+</a> ·
+              <a href="https://www.crucial.com/ssd/p5-plus" rel="noopener" target="_blank">P5+</a> ·
+              <a href="https://www.amazon.com/s?k=Crucial+P3+Plus+1TB" rel="noopener" target="_blank">Amazon</a>
+</td>
+</tr>
+<tr>
+<td>PSU</td>
+<td>
+<strong>550W 80+ Bronze — Corsair CX550/CX550M</strong><br/>
+<div class="link-row">
+<a href="https://www.corsair.com/us/en/p/psu/cp-9020121-na/cx-series-cx550-80-plus-bronze-certified-power-supply-cp-9020121-na" rel="noopener" target="_blank">Corsair</a>
+<a href="https://www.amazon.com/s?k=Corsair+CX550" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=CX550" rel="noopener" target="_blank">Newegg</a>
+</div>
+</td>
+<td><span class="badge price">$45–$65</span></td>
+<td class="note">
+              EVGA 600 BR — <a href="https://www.evga.com/products/product.aspx?pn=100-BR-0600-K1" rel="noopener" target="_blank">EVGA</a> ·
+              be quiet! System Power 10 550W — <a href="https://www.bequiet.com/en/powersupply/4169" rel="noopener" target="_blank">be quiet!</a>
+</td>
+</tr>
+<tr>
+<td>Case</td>
+<td>
+<strong>Montech X3 Mesh</strong><br/>
+<div class="link-row">
+<a href="https://montechpc.com/product/x3-mesh/" rel="noopener" target="_blank">Montech</a>
+<a href="https://www.amazon.com/s?k=Montech+X3+Mesh" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=Montech+X3+Mesh" rel="noopener" target="_blank">Newegg</a>
+</div>
+</td>
+<td><span class="badge price">$60–$70</span></td>
+<td class="note">Any mesh‑front budget case with at least 2 intake + 1 exhaust fan.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="price-note" style="padding:.8rem 1.25rem 1rem;border-top:1px dashed #e5e7eb;color:#6b7280;">
+      *Prices vary by color/retailer and frequent sales. Totals hover around <strong>$580–$620</strong>.
+    </div>
+</section>
+<div class="grid">
+<section class="part-card" id="cpu">
+<h3>CPU Options</h3>
+<img alt="CPU" class="img" src="images/cpu.png"/>
+<div class="opts">
+<div class="opt"><strong>Primary:</strong> AMD <strong>Ryzen 5 5600</strong> — 6C/12T, excellent gaming value; includes Wraith cooler. <span class="badge alt">~$110</span></div>
+<div class="link-row">
+<a href="https://www.amd.com/en/products/cpu/amd-ryzen-5-5600" rel="noopener" target="_blank">AMD</a>
+<a href="https://www.amazon.com/s?k=ryzen+5+5600" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=ryzen+5+5600" rel="noopener" target="_blank">Newegg</a>
+</div>
+<div class="opt"><strong>Cheaper:</strong> AMD <strong>Ryzen 5 5500</strong> — best under ~$100 if you must save. <span class="badge alt">~$95</span></div>
+<div class="link-row">
+<a href="https://www.amd.com/en/products/cpu/amd-ryzen-5-5500" rel="noopener" target="_blank">AMD</a>
+<a href="https://www.amazon.com/s?k=ryzen+5+5500" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=ryzen+5+5500" rel="noopener" target="_blank">Newegg</a>
+</div>
+<div class="opt"><strong>Intel route:</strong> <strong>Core i3‑12100F</strong> — strong 4P/8T gaming chip; pair with B660/B760 DDR4 board. <span class="badge alt">~$100</span></div>
+<div class="link-row">
+<a href="https://www.intel.com/content/www/us/en/products/sku/134599/intel-core-i312100f-processor-12m-cache-up-to-4-30-ghz/specifications.html" rel="noopener" target="_blank">Intel</a>
+<a href="https://www.amazon.com/s?k=Intel+i3-12100F" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=i3+12100F" rel="noopener" target="_blank">Newegg</a>
+</div>
+</div>
+<p class="note">5600 performs better than 5500 thanks to more cache and PCIe lanes; all three are great bang‑for‑buck for 1080p.</p>
+</section>
+<section class="part-card" id="gpu">
+<h3>Graphics Card</h3>
+<img alt="GPU" class="img" src="images/gpu.png"/>
+<div class="opts">
+<div class="opt"><strong>Primary:</strong> AMD <strong>Radeon RX 6600 8GB</strong> — the 1080p budget king; often dips below $190. <span class="badge alt">$170–$200</span></div>
+<div class="link-row">
+<a href="https://www.amd.com/en/products/graphics/amd-radeon-rx-6600" rel="noopener" target="_blank">AMD</a>
+<a href="https://www.amazon.com/s?k=rx+6600" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=rx+6600" rel="noopener" target="_blank">Newegg</a>
+</div>
+<div class="opt"><strong>Stretch:</strong> <strong>RX 6650 XT</strong> — ~10–15% faster; grab if close to $200–$230. <span class="badge alt">$200–$230</span></div>
+<div class="link-row">
+<a href="https://www.amd.com/en/products/graphics/amd-radeon-rx-6650-xt" rel="noopener" target="_blank">AMD</a>
+<a href="https://www.amazon.com/s?k=rx+6650+xt" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=rx+6650+xt" rel="noopener" target="_blank">Newegg</a>
+</div>
+</div>
+<p class="note">Either card pairs perfectly with the 5600/i3 tier without CPU bottlenecking at 1080p High.</p>
+</section>
+<section class="part-card" id="mobo">
+<h3>Motherboard</h3>
+<img alt="Motherboard" class="img" src="images/motherboard.png"/>
+<div class="opts">
+<div class="opt"><strong>Primary:</strong> <strong>MSI B550M PRO‑VDH WiFi</strong> (mATX) — PCIe 4.0, M.2 heatsink, decent VRM, Wi‑Fi. <span class="badge alt">$100–$110</span></div>
+<div class="link-row">
+<a href="https://us.msi.com/Motherboard/B550M-PRO-VDH-WIFI/Overview" rel="noopener" target="_blank">MSI</a>
+<a href="https://www.amazon.com/s?k=MSI+B550M+PRO-VDH+WiFi" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=B550M+PRO-VDH+WiFi" rel="noopener" target="_blank">Newegg</a>
+</div>
+<div class="opt"><strong>Also good:</strong> Any reputable B550 mATX board from ASUS, Gigabyte, ASRock in similar price.</div>
+</div>
+<p class="note">AM4 is a value platform in 2025 with mature BIOS and plentiful boards.</p>
+</section>
+<section class="part-card" id="ram">
+<h3>Memory</h3>
+<img alt="Memory" class="img" src="images/ram.png"/>
+<div class="opts">
+<div class="opt"><strong>Primary:</strong> <strong>16GB (2x8) DDR4‑3200</strong> CL16–22 — Crucial/Corsair/Team kits frequently $30–$40. <span class="badge alt">$30–$40</span></div>
+<div class="link-row">
+<a href="https://www.crucial.com/memory/ddr4" rel="noopener" target="_blank">Crucial</a>
+<a href="https://www.corsair.com/us/en/c/memory/vengeance-lpx?filters=dramspeed%3ADDR4" rel="noopener" target="_blank">Corsair</a>
+<a href="https://www.teamgroupinc.com/en/product/elt-ddr4" rel="noopener" target="_blank">TeamGroup</a>
+<a href="https://www.amazon.com/s?k=16GB+DDR4+3200+kit" rel="noopener" target="_blank">Amazon</a>
+</div>
+<div class="opt"><strong>Upgrade:</strong> <strong>32GB</strong> later if you edit video or multitask heavy.</div>
+</div>
+<p class="note">Dual‑channel is key; avoid mixing random sticks.</p>
+</section>
+<section class="part-card" id="storage">
+<h3>Storage</h3>
+<img alt="SSD" class="img" src="images/ssd.png"/>
+<div class="opts">
+<div class="opt"><strong>Primary:</strong> <strong>WD Black SN770 1TB</strong> (PCIe 4.0 NVMe). <span class="badge alt">$55–$70</span></div>
+<div class="link-row">
+<a href="https://www.westerndigital.com/products/internal-drives/wd-black-sn770-nvme-ssd" rel="noopener" target="_blank">WD</a>
+<a href="https://www.amazon.com/s?k=WD+Black+SN770+1TB" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=SN770+1TB" rel="noopener" target="_blank">Newegg</a>
+</div>
+<div class="opt"><strong>Alt:</strong> Crucial <strong>P3 Plus/P5 Plus</strong> 1TB at similar pricing.</div>
+<div class="link-row">
+<a href="https://www.crucial.com/ssd/p3-plus" rel="noopener" target="_blank">P3 Plus</a>
+<a href="https://www.crucial.com/ssd/p5-plus" rel="noopener" target="_blank">P5 Plus</a>
+<a href="https://www.amazon.com/s?k=Crucial+P3+Plus+1TB" rel="noopener" target="_blank">Amazon</a>
+</div>
+</div>
+<p class="note">1TB is the sweet spot; add a cheap 2TB SATA HDD only if you need mass storage.</p>
+</section>
+<section class="part-card" id="psu">
+<h3>Power Supply</h3>
+<img alt="PSU" class="img" src="images/psu.png"/>
+<div class="opts">
+<div class="opt"><strong>Primary:</strong> <strong>Corsair CX550 / CX550M</strong> — 80+ Bronze, solid OEM, long‑running budget favorite. <span class="badge alt">$45–$65</span></div>
+<div class="link-row">
+<a href="https://www.corsair.com/us/en/p/psu/cp-9020121-na/cx-series-cx550-80-plus-bronze-certified-power-supply-cp-9020121-na" rel="noopener" target="_blank">Corsair</a>
+<a href="https://www.amazon.com/s?k=Corsair+CX550" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=CX550" rel="noopener" target="_blank">Newegg</a>
+</div>
+<div class="opt"><strong>Also good:</strong> EVGA <strong>600 BR</strong>; be quiet! <strong>System Power 10 550W</strong>.</div>
+<div class="link-row">
+<a href="https://www.evga.com/products/product.aspx?pn=100-BR-0600-K1" rel="noopener" target="_blank">EVGA</a>
+<a href="https://www.bequiet.com/en/powersupply/4169" rel="noopener" target="_blank">be quiet!</a>
+</div>
+</div>
+<p class="note">550W is plenty for RX 6600/6650 XT + Ryzen 5; avoid no‑name PSUs.</p>
+</section>
+<section class="part-card" id="case">
+<h3>Case &amp; Cooling</h3>
+<img alt="Case" class="img" src="images/case.png"/>
+<div class="opts">
+<div class="opt"><strong>Primary:</strong> <strong>Montech X3 Mesh</strong> — great airflow + 6 included fans. <span class="badge alt">$60–$70</span></div>
+<div class="link-row">
+<a href="https://montechpc.com/product/x3-mesh/" rel="noopener" target="_blank">Montech</a>
+<a href="https://www.amazon.com/s?k=Montech+X3+Mesh" rel="noopener" target="_blank">Amazon</a>
+<a href="https://www.newegg.com/p/pl?d=Montech+X3+Mesh" rel="noopener" target="_blank">Newegg</a>
+</div>
+<div class="opt"><strong>Also good:</strong> Any mesh‑front budget case with at least 2 intake + 1 exhaust fan.</div>
+</div>
+<p class="note">Use the stock Ryzen cooler; add a $20 tower cooler only if noise/temps bother you.</p>
+</section>
+</div>
+<section class="card" id="upgrades" style="margin-top:2rem;">
+<div style="padding:1.1rem 1.25rem; border-bottom:1px solid #e5e7eb; background:#fbfdff;">
+<h2 style="margin:0; font-size:1.1rem;"><i class="fas fa-arrow-up"></i> Smart Upgrades Later</h2>
+</div>
+<div style="padding:1rem 1.25rem;">
+<ul>
+<li><strong>GPU:</strong> Jump to an RX 7600/7600 XT if prices drop — instant 1080p+ uplift.</li>
+<li><strong>RAM:</strong> 32GB (2x16) if you stream, mod heavily, or keep many Chrome tabs.</li>
+<li><strong>Cooling:</strong> A $20–$30 120/140mm tower cooler to quiet sustained loads.</li>
+<li><strong>Storage:</strong> Add a second 1TB NVMe when games pile up.</li>
+</ul>
+</div>
+</section>
+<p class="note" style="margin-top:1rem;">All prices are typical US street prices as of August 25, 2025. If you’re outside the US, swap to local retailers but keep the same <em>tier</em> of parts.</p>
+</article>
+<section class="newsletter">
+<div class="container">
+<h2>Want More Builds Like This?</h2>
+<p>Get budget‑friendly PC builds and upgrade guides in your inbox</p>
+<form class="newsletter-form">
+<input placeholder="Enter your email" required="" type="email"/>
+<button type="submit">Subscribe</button>
+</form>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<h3>GeekyGoo</h3>
+<p>Honest reviews, practical guides, and insider tips for tech and gaming enthusiasts.</p>
+</div>
+<div class="footer-section">
+<h4>Categories</h4>
+<ul>
+<li><a href="../index.html#blog">PC Builds</a></li>
+<li><a href="../index.html#blog">Gaming Peripherals</a></li>
+<li><a href="../index.html#blog">Audio Equipment</a></li>
+<li><a href="../index.html#blog">Buying Guides</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Connect</h4>
+<div class="social-links">
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+<a href="#"><i class="fab fa-discord"></i></a>
+<a href="#"><i class="fab fa-reddit"></i></a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2025 GeekyGoo. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script src="../script.js"></script>
+</body>
+</html>
